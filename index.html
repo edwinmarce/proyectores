@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="es-ec">
+<head>
+<meta charset="utf-8">
+<title>Página principal</title>
+<meta name="description" content="venta e ifromación de proyectores">
+<meta name="keywords" content="proyector, proyectores, tecnología, educación, cine">
+<meta name="author" content="Edwin">
+<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+<link href="proyectores.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="jquery-3.7.0.min.js"></script>
+<script src="jquery.2dtransform.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="jquery.ui.effect-bars.min.js"></script>
+<script src="jquery.ui.effect-blast.min.js"></script>
+<script src="jquery.ui.effect-squares.min.js"></script>
+<script src="wb.slideshow.min.js"></script>
+<script src="wb.stickylayer.min.js"></script>
+<script src="wwb18.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event)
+{
+   var ThemeableMenu1_dropdownToggle = document.querySelectorAll('#ThemeableMenu1 .dropdown-toggle');
+   ThemeableMenu1_dropdownToggle.forEach(item => 
+   {
+      var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
+   });
+   var ThemeableMenu1_dropdown = document.querySelectorAll('#ThemeableMenu1 .dropdown');
+   ThemeableMenu1_dropdown.forEach(item => 
+   {
+      item.addEventListener('shown.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.add('show');
+      });
+      item.addEventListener('hidden.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.remove('show');
+      });
+   });
+});
+</script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_Text1').addClass('visibility-hidden');
+   $("#SlideShow1").slideshow(
+   {
+      interval: 4000,
+      type: 'sequence',
+      effect: 'random',
+      direction: '',
+      count: 8,
+      pagination: false,
+      fullscreen: 0,
+      maxWidth: 300,
+      captionShow: {top: '0px'},
+      captionHide: {top: '-40px'},
+      easing: 'swing',
+      effectlength: 2000
+   });
+   $("#SlideShow1_back a").click(function()
+   {
+      $('#SlideShow1').slideshow('previmage');
+   });
+   $("#SlideShow1_next a").click(function()
+   {
+      $('#SlideShow1').slideshow('nextimage');
+   });
+   function onScrollText1()
+   {
+      var $obj = $("#wb_Text1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Text1', 'puff-in', 0, 500);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Text1', 'animate-fade-out', 0, 500);
+      }
+   }
+   if (!$('#wb_Text1').inViewPort(true))
+   {
+      $('#wb_Text1').addClass("in-viewport");
+   }
+   onScrollText1();
+   $(window).scroll(function(event)
+   {
+      onScrollText1();
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("#Layer1").stickylayer({orientation: 3, position: [0, 0], delay: 500});
+});
+</script>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="col-1">
+</div>
+<div class="col-2">
+<ul id="SlideShow1" style="display:inline-block;position:relative;width:362px;height:224px;   border: 2px solid #000000;
+box-sizing:border-box;border-radius:20px;z-index:0;">
+<li><img class="image" width="640" height="400" src="images/proyector1.jpg" alt="" title=""></li>
+<li><img class="image" width="640" height="400" src="images/proyector2.jpg" style ="display:none;" alt="" title=""></li>
+<li><img class="image" width="640" height="400" src="images/proyector3.jpg" style ="display:none;" alt="" title=""></li>
+<li><img class="image" width="640" height="400" src="proyector4.jpeg" style ="display:none;" alt="" title=""></li>
+<li><img class="image" width="640" height="400" src="images/proyector5.jpg" style ="display:none;" alt="" title=""></li>
+<li><img class="image" width="640" height="400" src="images/proyector6.jpg" style ="display:none;" alt="" title=""></li>
+<div class="caption"><div class="caption_background"><div class="caption_text"></div></div></div>
+<div id="SlideShow1_back" style="position:absolute;left:4px;top:99px;width:30px;height:30px;z-index:999"><a class="slideshow-control" role="button"><img alt="Back" width="30" height="30" src="images/carousel_back.png"></a></div>
+<div id="SlideShow1_next" style="position:absolute;left:328px;top:99px;width:30px;height:30px;z-index:999"><a class="slideshow-control" role="button"><img alt="Next" width="30" height="30" src="images/carousel_next.png"></a></div>
+</ul>
+</div>
+<div class="col-3">
+<div id="wb_Image37" style="display:inline-block;width:100%;height:auto;z-index:1;">
+<img src="images/boy.png" id="Image37" alt="" width="270" height="397">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text1">
+<p>¡Bienvenido, a tu web de proyectores!</p>
+</div>
+<div id="wb_Text2">
+<p><a href="#" class="style1">Aquí encontrarás todo lo que necesitas saber para elegir el mejor proyector y tomar la decisión correcta, que cumpla tus expectativas, se adapte a tus necesidades y, sobre todo… ¡a tu bolsillo!</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card1" style="display:flex;width:100%;z-index:4;" class="card">
+   <div id="Card1-card-header">Ahorra tiempo</div>
+   <div id="Card1-card-body">
+      <div id="Card1-card-item1"><i class="fa fa-clock-o"></i></div>
+      <div id="Card1-card-item2">Analizamos los mejores proyectores para que ahorres tiempo buscando entre listados infinitos de productos sin qué debes tener en cuenta y saber cuál elegir.</div>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card4" style="display:flex;width:100%;z-index:5;" class="card">
+   <div id="Card4-card-header">Ahorra dinero</div>
+   <div id="Card4-card-body">
+      <div id="Card4-card-item1"><i class="fa fa-money"></i></div>
+      <div id="Card4-card-item2">Elegimos las mejores ofertas de proyectores para que compres al precio adecuado. Si un producto se vende por encima de su precio lo descartamos.<br><br></div>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card3" style="display:flex;width:100%;z-index:6;" class="card">
+   <div id="Card3-card-header">Calidad asegurada</div>
+   <div id="Card3-card-body">
+      <div id="Card3-card-item1"><i class="fa fa-star"></i></div>
+      <div id="Card3-card-item2">Todos los proyectores que seleccionamos cuentan con buenas valoraciones por parte de los usuarios. Si un modelo tiene malas reseñas lo descartamos.<br><br></div>
+   </div>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Card2" style="display:flex;width:100%;z-index:7;" class="card">
+   <div id="Card2-card-header">Resuelve tus dudas</div>
+   <div id="Card2-card-body">
+      <div id="Card2-card-item1"><i class="fa fa-question-circle"></i></div>
+      <div id="Card2-card-item2">Si tienes dudas con cualquier marca o modelo, déjanos un comentario en cualquier página o escríbenos a través de la página de contacto y te ayudaremos a decidirte.<br></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<a id="Button2" href="./marcas.html" onmouseover="AnimateCss('Button2', 'transform-pulse', 0, 500);return false;" style="display:inline-block;width:393px;height:53px;z-index:8;">Marcas de proyectores de video</a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="col-1">
+<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:9;">
+<a href="./marcas.html#optoma" onmouseover="AnimateCss('wb_Image1', 'transform-pulse', 0, 500);return false;"><img src="images/logo Optoma.png" id="Image1" alt="" width="170" height="90"></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image2" style="display:inline-block;width:100%;height:auto;z-index:10;">
+<a href="./marcas.html#Benq" onmouseover="AnimateCss('wb_Image2', 'transform-pulse', 0, 500);return false;"><img src="images/logo BenQ.png" id="Image2" alt="" width="170" height="96"></a>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Image3" style="display:inline-block;width:100%;height:auto;z-index:11;">
+<a href="./marcas.html#epson" onmouseover="AnimateCss('wb_Image3', 'transform-pulse', 0, 500);return false;"><img src="images/logo epson.png" id="Image3" alt="" width="170" height="55"></a>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Image4" style="display:inline-block;width:100%;height:auto;z-index:12;">
+<a href="./marcas.html#Acer" onmouseover="AnimateCss('wb_Image4', 'transform-pulse', 0, 500);return false;"><img src="images/logo Acer.png" id="Image4" alt="" width="170" height="106"></a>
+</div>
+</div>
+<div class="col-5">
+<div id="wb_Image5" style="display:inline-block;width:100%;height:auto;z-index:13;">
+<a href="./marcas.html#lg" onmouseover="AnimateCss('wb_Image5', 'transform-pulse', 0, 500);return false;"><img src="images/logo lg.png" id="Image5" alt="" width="170" height="85"></a>
+</div>
+</div>
+<div class="col-6">
+<div id="wb_Image6" style="display:inline-block;width:100%;height:auto;z-index:14;">
+<a href="./marcas.html#viewsonic" onmouseover="AnimateCss('wb_Image6', 'transform-pulse', 0, 500);return false;"><img src="images/logo ViewSonic.png" id="Image6" alt="" width="170" height="96"></a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="col-1">
+<div id="wb_Image7" style="display:inline-block;width:100%;height:auto;z-index:15;">
+<a href="./marcas.html#xiaomi"><img src="images/logo Xiaomi.png" id="Image7" alt="" width="170" height="96"></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image8" style="display:inline-block;width:100%;height:auto;z-index:16;">
+<a href="./marcas.html#xgimi"><img src="images/log xgimi.png" id="Image8" alt="" width="170" height="59"></a>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Image9" style="display:inline-block;width:100%;height:auto;z-index:17;">
+<a href="./marcas.html#samsung"><img src="images/logo Samsung.png" id="Image9" alt="" width="170" height="56"></a>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Image10" style="display:inline-block;width:100%;height:auto;z-index:18;">
+<a href="./marcas.html#wimius"><img src="images/logo wimius.png" id="Image10" alt="" width="170" height="67"></a>
+</div>
+</div>
+<div class="col-5">
+<div id="wb_Image11" style="display:inline-block;width:100%;height:auto;z-index:19;">
+<a href="./marcas.html#artlii"><img src="images/logo artlii.png" id="Image11" alt="" width="170" height="83"></a>
+</div>
+</div>
+<div class="col-6">
+<div id="wb_Image12" style="display:inline-block;width:100%;height:auto;z-index:20;">
+<a href="./marcas.html#yaber"><img src="images/logo yaber.png" id="Image12" alt="" width="170" height="78"></a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid18">
+<div id="LayoutGrid18">
+<div class="col-1">
+<div id="wb_Image38" style="display:inline-block;width:100%;height:auto;z-index:21;">
+<a href="./marcas.html#Sony"><img src="images/logo sony.png" id="Image38" alt="" width="170" height="36"></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Image39" style="display:inline-block;width:100%;height:auto;z-index:22;">
+<a href="./marcas.html#Casio"><img src="images/logo casio.png" id="Image39" alt="" width="170" height="32"></a>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Image40" style="display:inline-block;width:100%;height:auto;z-index:23;">
+<a href="./marcas.html#Vivitek"><img src="images/logo vivitek.png" id="Image40" alt="" width="170" height="72"></a>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Image41" style="display:inline-block;width:100%;height:auto;z-index:24;">
+<a href="./marcas.html#luximagen"><img src="images/logo luximagen.jpg" id="Image41" alt="" width="170" height="84"></a>
+</div>
+</div>
+<div class="col-5">
+</div>
+<div class="col-6">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<input type="submit" id="Button1" onmouseover="AnimateCss('Button1', 'transform-pulse', 0, 500);return false;" name="" value="Proyectores por resolución" style="display:inline-block;width:393px;height:53px;z-index:25;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8">
+<div class="col-1">
+<div id="wb_Image13" style="display:inline-block;width:100%;height:auto;z-index:26;">
+<a href="./marcas.html#optoma"><img src="images/resolución1.jpg" id="Image13" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button8" name="" value="Proyectores baratos" style="display:inline-block;width:260px;height:39px;z-index:27;">
+</div>
+<div class="col-2">
+<div id="wb_Image15" style="display:inline-block;width:100%;height:auto;z-index:28;">
+<a href="./marcas.html#optoma"><img src="images/resolución2.jpg" id="Image15" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button9" name="" value="Proyectores HD 720p" style="display:inline-block;width:260px;height:39px;z-index:29;">
+</div>
+<div class="col-3">
+<div id="wb_Image14" style="display:inline-block;width:100%;height:auto;z-index:30;">
+<a href="./marcas.html#optoma"><img src="images/resolución3.jpg" id="Image14" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button10" name="" value="Proyectores full HD" style="display:inline-block;width:260px;height:39px;z-index:31;">
+</div>
+<div class="col-4">
+<div id="wb_Image16" style="display:inline-block;width:100%;height:auto;z-index:32;">
+<a href="./marcas.html#optoma"><img src="images/resolución4.jpg" id="Image16" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button11" name="" value="Proyectores 4K" style="display:inline-block;width:260px;height:39px;z-index:33;">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<input type="submit" id="Button3" onmouseover="AnimateCss('Button3', 'transform-peek', 0, 500);return false;" name="" value="Proyectores por uso" style="display:inline-block;width:393px;height:53px;z-index:34;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid10">
+<div id="LayoutGrid10">
+<div class="col-1">
+<div id="wb_Image17" style="display:inline-block;width:100%;height:auto;z-index:35;">
+<a href="./marcas.html#optoma"><img src="images/uso1.jpg" id="Image17" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button4" name="" value="Cine en casa" style="display:inline-block;width:260px;height:39px;z-index:36;">
+</div>
+<div class="col-2">
+<div id="wb_Image19" style="display:inline-block;width:100%;height:auto;z-index:37;">
+<a href="./marcas.html#optoma"><img src="images/uso2.jpg" id="Image19" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button5" name="" value="De alto brillo" style="display:inline-block;width:260px;height:39px;z-index:38;">
+</div>
+<div class="col-3">
+<div id="wb_Image18" style="display:inline-block;width:100%;height:auto;z-index:39;">
+<a href="./marcas.html#optoma"><img src="images/uso3.jpg" id="Image18" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button6" name="" value="Para presentaciones" style="display:inline-block;width:260px;height:39px;z-index:40;">
+</div>
+<div class="col-4">
+<div id="wb_Image20" style="display:inline-block;width:100%;height:auto;z-index:41;">
+<a href="./marcas.html#optoma"><img src="images/uso4.jpg" id="Image20" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button7" name="" value="Proyectores 3D" style="display:inline-block;width:260px;height:39px;z-index:42;">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid11">
+<div id="LayoutGrid11">
+<div class="col-1">
+<div id="wb_Image21" style="display:inline-block;width:100%;height:auto;z-index:43;">
+<a href="./marcas.html#optoma"><img src="images/uso5.jpg" id="Image21" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button12" name="" value="Gaming" style="display:inline-block;width:260px;height:39px;z-index:44;">
+</div>
+<div class="col-2">
+<div id="wb_Image23" style="display:inline-block;width:100%;height:auto;z-index:45;">
+<a href="./marcas.html#optoma"><img src="images/uso6.jpg" id="Image23" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button13" name="" value="Smart TV y TDT" style="display:inline-block;width:260px;height:39px;z-index:46;">
+</div>
+<div class="col-3">
+<div id="wb_Image22" style="display:inline-block;width:100%;height:auto;z-index:47;">
+<a href="./marcas.html#optoma"><img src="images/uso7.jpg" id="Image22" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button14" name="" value="Para usar con el móvil" style="display:inline-block;width:260px;height:39px;z-index:48;">
+</div>
+<div class="col-4">
+<div id="wb_Image24" style="display:inline-block;width:100%;height:auto;z-index:49;">
+<a href="./marcas.html#optoma"><img src="images/uso8.jpg" id="Image24" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button15" name="" value="Con Android" style="display:inline-block;width:260px;height:39px;z-index:50;">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid12">
+<div id="LayoutGrid12">
+<div class="col-1">
+<div id="wb_Image25" style="display:inline-block;width:100%;height:auto;z-index:51;">
+<a href="./marcas.html#optoma"><img src="images/uso9.jpg" id="Image25" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button16" name="" value="Wifi y bluetooth" style="display:inline-block;width:260px;height:39px;z-index:52;">
+</div>
+<div class="col-2">
+<div id="wb_Image27" style="display:inline-block;width:100%;height:auto;z-index:53;">
+<a href="./marcas.html#optoma"><img src="images/uso10.jpg" id="Image27" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button17" name="" value="Con USB" style="display:inline-block;width:260px;height:39px;z-index:54;">
+</div>
+<div class="col-3">
+<div id="wb_Image26" style="display:inline-block;width:100%;height:auto;z-index:55;">
+<a href="./marcas.html#optoma"><img src="images/uso11.jpg" id="Image26" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button18" name="" value="Con HDMI" style="display:inline-block;width:260px;height:39px;z-index:56;">
+</div>
+<div class="col-4">
+<div id="wb_Image28" style="display:inline-block;width:100%;height:auto;z-index:57;">
+<a href="./marcas.html#optoma"><img src="images/uso12.jpg" id="Image28" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button19" name="" value="De tiro corto" style="display:inline-block;width:260px;height:39px;z-index:58;">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid13">
+<div id="LayoutGrid13">
+<div class="row">
+<div class="col-1">
+<input type="submit" id="Button20" onmouseover="AnimateCss('Button20', 'transform-peek', 0, 500);return false;" name="" value="Mini proyectores" style="display:inline-block;width:393px;height:53px;z-index:59;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid14">
+<div id="LayoutGrid14">
+<div class="col-1">
+<div id="wb_Image29" style="display:inline-block;width:100%;height:auto;z-index:60;">
+<a href="./marcas.html#optoma"><img src="images/mini1.jpg" id="Image29" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button21" name="" value="Todos los mini" style="display:inline-block;width:260px;height:39px;z-index:61;">
+</div>
+<div class="col-2">
+<div id="wb_Image31" style="display:inline-block;width:100%;height:auto;z-index:62;">
+<a href="./marcas.html#optoma"><img src="images/mini2.jpg" id="Image31" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button22" name="" value="Portátiles" style="display:inline-block;width:260px;height:39px;z-index:63;">
+</div>
+<div class="col-3">
+<div id="wb_Image30" style="display:inline-block;width:100%;height:auto;z-index:64;">
+<a href="./marcas.html#optoma"><img src="images/mini3.jpg" id="Image30" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button23" name="" value="De bolsillo" style="display:inline-block;width:260px;height:39px;z-index:65;">
+</div>
+<div class="col-4">
+<div id="wb_Image32" style="display:inline-block;width:100%;height:auto;z-index:66;">
+<a href="./marcas.html#optoma"><img src="images/mini4.jpg" id="Image32" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button24" name="" value="Pico proyectores" style="display:inline-block;width:260px;height:39px;z-index:67;">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid15">
+<div id="LayoutGrid15">
+<div class="row">
+<div class="col-1">
+<input type="submit" id="Button25" onmouseover="AnimateCss('Button25', 'transform-peek', 0, 500);return false;" name="" value="Tecnología de  proyectores" style="display:inline-block;width:393px;height:53px;z-index:68;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid16">
+<div id="LayoutGrid16">
+<div class="col-1">
+<div id="wb_Image33" style="display:inline-block;width:100%;height:auto;z-index:69;">
+<a href="./marcas.html#optoma"><img src="images/tecnología1.jpg" id="Image33" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button26" name="" value="Proyectores LCD" style="display:inline-block;width:260px;height:39px;z-index:70;">
+</div>
+<div class="col-2">
+<div id="wb_Image35" style="display:inline-block;width:100%;height:auto;z-index:71;">
+<a href="./marcas.html#optoma"><img src="images/tecnología2.jpg" id="Image35" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button27" name="" value="Proyectores DLP" style="display:inline-block;width:260px;height:39px;z-index:72;">
+</div>
+<div class="col-3">
+<div id="wb_Image34" style="display:inline-block;width:100%;height:auto;z-index:73;">
+<a href="./marcas.html#optoma"><img src="images/tecnología3.jpg" id="Image34" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button28" name="" value="Proyectores LED" style="display:inline-block;width:260px;height:39px;z-index:74;">
+</div>
+<div class="col-4">
+<div id="wb_Image36" style="display:inline-block;width:100%;height:auto;z-index:75;">
+<a href="./marcas.html#optoma"><img src="images/tecnología4.jpg" id="Image36" alt="" width="270" height="180"></a>
+</div>
+<input type="submit" id="Button29" name="" value="Proyectores Láser" style="display:inline-block;width:260px;height:39px;z-index:76;">
+</div>
+</div>
+</div>
+<div id="wb_contacto">
+<div id="contacto">
+<div class="row">
+<div class="col-1">
+<input type="submit" id="Button30" onmouseover="AnimateCss('Button30', 'transform-peek', 0, 500);return false;" name="" value="Contacto" style="display:inline-block;width:270px;height:53px;z-index:77;">
+</div>
+<div class="col-2">
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid19">
+<div id="LayoutGrid19">
+<div class="row">
+<div class="col-1">
+<div id="wb_Card7" style="display:flex;width:100%;z-index:78;" class="card">
+   <div id="Card7-card-body">
+      <a href="./index.html"><img id="Card7-card-item0" src="images/phone.png" width="500" height="525" alt="" title=""></a>
+      <div id="Card7-card-item1">Teléfono</div>
+      <div id="Card7-card-item2">06 2640811</div>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card5" style="display:flex;width:100%;z-index:79;" class="card">
+   <div id="Card5-card-body">
+      <a href="./index.html"><img id="Card5-card-item0" src="images/email.png" width="500" height="500" alt="" title=""></a>
+      <div id="Card5-card-item1">Email</div>
+      <div id="Card5-card-item2">ueibachillerato@gmail.com</div>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Card6" style="display:flex;width:100%;z-index:80;" class="card">
+   <div id="Card6-card-body">
+      <a href="./index.html"><img id="Card6-card-item0" src="images/location.png" width="500" height="500" alt="" title=""></a>
+      <div id="Card6-card-item1">Ubicación</div>
+      <div id="Card6-card-item2">Av. Mariano Acosta 14-27</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.3" d="M 505.29,47.51947 C 346.07,47.51947 235.61,230.3 0,230.3 V 0.3 h 508 z" />
+<path class="divider-fill" style="opacity:0.4" d="M 485.29,47.44 C 326.07,47.44 235.61,214.36 0,214.36 V 0.2 h 485.29 z" />
+<path class="divider-fill" style="opacity:0.5" d="m 485.29,48.46999 q -9.42,-0.31 -20,-0.32 c -159.22,0 -229.68,151 -465.29,151 v -198.24 h 485.29 z" />
+<path class="divider-fill" d="M 0,182 V -0.27 H 1000 V 24.4 C 787.4,24.4 781,99.85 702.92,99.85 645,99.85 632.92,46.97 445.29,46.97 286.07,46.97 235.61,182 0,182 Z" />
+</svg></div>
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Breadcrumb1" style="display:inline-block;width:100%;z-index:81;vertical-align:top;">
+<ul id="Breadcrumb1">
+<li><a href="">PROYECTORES</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;z-index:82;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style ="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button title="" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item">
+<a href="./marcas.html" class="nav-link">Marcas</a>
+</li>
+<li class="nav-item">
+<a href="./resolucion.html" class="nav-link">Resolución</a>
+</li>
+<li class="nav-item">
+<a href="./usos.html" class="nav-link">Usos</a>
+</li>
+<li class="nav-item">
+<a href="./mini.html" class="nav-link">Mini proyectores</a>
+</li>
+<li class="nav-item">
+<a href="./tecnologia.html" class="nav-link">Tecnología</a>
+</li>
+<li class="nav-item">
+<a href="./index.html#contacto" class="nav-link">Contacto</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid20">
+<div id="LayoutGrid20">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="Html1" style="display:inline-block;width:100%;height:332px;overflow:auto;z-index:83">
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.744593138183!2d-78.12362028553864!3d0.3483177640720858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMjAnNTQuNSJOIDc4wrAwNycxNy4wIlc!5e0!3m2!1ses!2sec!4v1679783635307!5m2!1ses!2sec" 
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid17">
+<div id="LayoutGrid17">
+<div class="col-1">
+<div id="wb_Text3">
+<p>Copyright © 2023 - Diseñado por Edwin</p>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Card8" style="display:flex;width:100%;z-index:85;" class="card">
+   <div id="Card8-card-body">
+      <div id="Card8-card-item0"><i class="fa fa-facebook-official"></i></div>
+      <div id="Card8-card-item1"><i class="fa fa-youtube"></i></div>
+      <div id="Card8-card-item2"><i class="fa fa-instagram"></i></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+<div id="Layer1" style="position:absolute;text-align:left;left:1210px;top:810px;width:69px;height:79px;z-index:87;">
+<div id="wb_Icon1" style="position:absolute;left:0px;top:17px;width:65px;height:45px;text-align:center;z-index:86;">
+<a href="#LayoutGrid1"><div id="Icon1"><i class="fa fa-chevron-circle-up"></i></div></a></div>
+</div>
+</body>
+</html>
